@@ -1,11 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
+    <header>
+        <div class="container">
+            <h1>Umer Shafi</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Hello! I’m Umer Shafi, a passionate web developer with a love for creating dynamic and user-friendly websites. With 5+ years of experience in the industry, I have honed my skills in front-end and back-end development, ensuring seamless experiences for users.</p>
+            </div>
+        </section>
+
+        <section id="education">
+          <div class="container">
+              <h2>Education</h2>
+              <ul>
+                  <li><strong>Bachelor of Science in Computer Science</strong> - University of California, Los Anegeles (2024)
+                      <ul>
+                          <li>Relevant Coursework: Data Structures, Algorithms, Software Engineering, Operating Systems, Artificial
+                            Intelligence, Programming Languages, Natural Language Processing, Web Applications</li>
+                      </ul>
+                  </li>
+                  <li><strong>AWS Certified Solutions Architect – Associate (SAA-C03) | AWS | Decemeber 2024
+                  </li>
+              </ul>
+          </div>
+      </section>
+
+        <section id="experience">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <ul>
+                    <li><strong>Software Engineer Intern</strong> - Crypto Reporting LLC (September 2024 - November 2024)
+                        <ul>
+                            <li>Implemented infrastructure as code (IaC) using AWS CDK with TypeScript to generate 4 CloudFormation stacks</li>
+                            <li>Enhanced data retrieval efficiency using AWS lambda with Node.js to connect seamlessly with DynamoDB Tables</li>
+                            <li>Secured APIs with AWS Cognito for user authentication and authorization using user and identity pools</li>
+                            <li>Built a CI-CD pipeline with integration test for all user interactions using AWS CodePipeline</li>
+                        </ul>
+                    </li>
+                    <li><strong>Software Engineer Intern</strong> - Monster Energy (June 2023 – August 2023)
+                        <ul>
+                            <li>Increased client satisfaction by 30% by implementing product listing filters on the MonsterShop eCommerce website using React Hooks</li>
+                            <li>Reduced pre-production bugs through the development and execution of user acceptance testing for over 100 unique
+                              UX designs in Panaya</li>
+                        </ul>
+                    </li>
+                    <li><strong>Undergraduate Teaching Assistant</strong> - UCLA Department of Computer Science (January 2024 - June 2024)
+                      <ul>
+                          <li>Improved student exam scores by 15% by developing and presenting NLP topics including LLMs, neural networks,
+                            and transformers to a class of 50+ students</li>
+                          <li>Boosted course evaluations by 20\% by providing assistance with Python code debugging during office hours</li>
+                      </ul>
+                  </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+          <div class="container">
+              <h2>Projects</h2>
+              <ul>
+                  <li><strong>Wiredin</strong>
+                      <ul>
+                          <li>A full-stack web application for movie lovers where users can upload reaction videos, comment, and review the latest movies</li>
+                          <li>Deployed on GCP utilizing Cloud Storage for hosting videos, Cloud Pub/Sub for handling upload events, and Cloud Run for scalable video transcoding with ffmpeg</li>
+                          <li>Engineered backend using Firebase, integrating Firestore for metadata storage, Firebase Functions for a CRUD API, and Firebase Auth for secure user authentication</li>
+                      </ul>
+                  </li>
+                  <li><strong>Cloud Portfolio</strong>
+                      <ul>
+                          <li>TODO</li>
+                          <li>TODO</li>
+                          <li>TODO</li>
+                      </ul>
+                  </li>
+                  <li><strong>Swifties</strong>
+                      <ul>
+                          <li>A configurable multi-threaded web server with support for echoing HTTP requests, serving static content, handling
+                            CRUD API requests, and enforcing authentication to increase file system security</li>
+                          <li>Built by a team of 4 using C++ with Boost, complete with a suite of GUnit unit/integration tests</li>
+                          <li>Deployable to a VM instance on GCP with support for metrics and logging</li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Languages: TypeScript, JavaScript, Python, C++, SQL</li>
+                    <li>Frameworks: React, Next.js, Node.js, Express.js, HTML, CSS</li>
+                    <li>Amazon Web Services (AWS): CDK, S3, Lambda, EC2, Cognito</li>
+                    <li>Databases: Firebase, DynamoDB, MongoDB</li>
+                    <li>Developer Tools: Git, Docker, Linux</li>
+                    <li>Software: Microsoft (Excel, PowerPoint, Word), Panaya, SAP SD</li>
+                    <li>Best Practices: Agile, Code Review, Testing (Unit, Integration, Regression)
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Umer Shafi. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
