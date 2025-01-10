@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "portfolio" {
-  bucket = "umershafi-website"
+  bucket = var.bucket_name
 }
 
 resource "aws_s3_bucket_website_configuration" "static_website" {
@@ -29,7 +29,7 @@ resource "aws_s3_bucket_policy" "allow_access_to_root_user" {
 data "aws_iam_policy_document" "bucket_policy" {
   statement {
     principals {
-      type        = "AWS"
+      type        = "*"
       identifiers = ["*"]
     }
 
@@ -71,7 +71,3 @@ resource "aws_s3_object" "object-upload-css" {
 #   source_hash  = filemd5("../frontend/${each.key}")
 #   content_type = lookup(local.mime_types, regex("\\.[^.]+$", each.key))
 # }
-
-output "website_endpoint" {
-  value = aws_s3_bucket.portfolio.website_domain
-}

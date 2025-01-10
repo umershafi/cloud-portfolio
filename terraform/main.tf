@@ -15,6 +15,14 @@ provider "aws" {
 # }
 
 module "s3_bucket" {
-  source = "./bucket"
+  source      = "./bucket"
+  bucket_name = var.portfolio_bucket_name
+}
+
+module "cloudfront" {
+  source             = "./cloudfront"
+  bucket_name        = var.portfolio_bucket_name
+  bucket_id          = module.s3_bucket.bucket_id
+  bucket_domain_name = module.s3_bucket.bucket_domain
 }
 
