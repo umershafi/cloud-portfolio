@@ -12,3 +12,8 @@ variable "bucket_domain_name" {
   description = "S3 bucket domain name"
   type        = string
 }
+
+variable "acm_arn" {
+  description = "arn for acm certificate"
+  type        = string
+}

@@ -12,6 +12,8 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   is_ipv6_enabled     = true
   default_root_object = "index.html"
 
+  aliases = ["www.umershafi.com"]
+
   # CachingOptimized
   default_cache_behavior {
     cache_policy_id        = "658327ea-f89d-4fab-a63d-7e88639e58f6"
@@ -28,6 +30,8 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn      = var.acm_arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2019"
   }
 }
