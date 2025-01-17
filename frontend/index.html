@@ -32,24 +32,23 @@
         <section id="about">
             <div class="container">
                 <h2>About Me</h2>
-                <p>Hello! I’m Umer Shafi, a passionate web developer with a love for creating dynamic and user-friendly websites.</p>
+                <p>Hello! I’m Umer Shafi, a passionate web developer with a love for creating dynamic and user-friendly websites. With 5+ years of experience in the industry, I have honed my skills in front-end and back-end development, ensuring seamless experiences for users.</p>
             </div>
         </section>
 
         <section id="education">
-          <div class="container">
-              <h2>Education</h2>
-              <ul>
-                  <li><strong>Bachelor of Science in Computer Science</strong> - University of California, Los Angeles (2024)
-                      <ul>
-                          <li>Relevant Coursework: Data Structures, Algorithms, Software Engineering, Operating Systems, Artificial
-                            Intelligence, Programming Languages, Natural Language Processing, Web Applications</li>
-                      </ul>
-                  </li>
-                  <li><strong>AWS Certified Solutions Architect – Associate (SAA-C03) | AWS | December 2024</strong></li>
-              </ul>
-          </div>
-      </section>
+            <div class="container">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>Bachelor of Science in Computer Science</strong> - University of California, Los Angeles (2024)
+                        <ul>
+                            <li>Relevant Coursework: Data Structures, Algorithms, Software Engineering, Operating Systems, Artificial Intelligence, Programming Languages, Natural Language Processing, Web Applications</li>
+                        </ul>
+                    </li>
+                    <li><strong>AWS Certified Solutions Architect – Associate (SAA-C03) | AWS | December 2024</strong></li>
+                </ul>
+            </div>
+        </section>
 
         <section id="experience">
             <div class="container">
@@ -70,45 +69,43 @@
                         </ul>
                     </li>
                     <li><strong>Undergraduate Teaching Assistant</strong> - UCLA Department of Computer Science (January 2024 - June 2024)
-                      <ul>
-                          <li>Improved student exam scores by 15% by developing and presenting NLP topics including LLMs, neural networks,
-                            and transformers to a class of 50+ students</li>
-                          <li>Boosted course evaluations by 20% by providing assistance with Python code debugging during office hours</li>
-                      </ul>
-                  </li>
+                        <ul>
+                            <li>Improved student exam scores by 15% by developing and presenting NLP topics including LLMs, neural networks, and transformers to a class of 50+ students</li>
+                            <li>Boosted course evaluations by 20% by providing assistance with Python code debugging during office hours</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </section>
 
         <section id="projects">
-          <div class="container">
-              <h2>Projects</h2>
-              <ul>
-                  <li><strong>Wiredin</strong>
-                      <ul>
-                          <li>A full-stack web application for movie lovers where users can upload reaction videos, comment, and review the latest movies</li>
-                          <li>Deployed on GCP utilizing Cloud Storage for hosting videos, Cloud Pub/Sub for handling upload events, and Cloud Run for scalable video transcoding with ffmpeg</li>
-                          <li>Engineered backend using Firebase, integrating Firestore for metadata storage, Firebase Functions for a CRUD API, and Firebase Auth for secure user authentication</li>
-                      </ul>
-                  </li>
-                  <li><strong>Cloud Portfolio</strong>
-                      <ul>
-                          <li>TODO</li>
-                          <li>TODO</li>
-                          <li>TODO</li>
-                      </ul>
-                  </li>
-                  <li><strong>Swifties</strong>
-                      <ul>
-                          <li>A configurable multi-threaded web server with support for echoing HTTP requests, serving static content, handling
-                            CRUD API requests, and enforcing authentication to increase file system security</li>
-                          <li>Built by a team of 4 using C++ with Boost, complete with a suite of GUnit unit/integration tests</li>
-                          <li>Deployable to a VM instance on GCP with support for metrics and logging</li>
-                      </ul>
-                  </li>
-              </ul>
-          </div>
-      </section>
+            <div class="container">
+                <h2>Projects</h2>
+                <ul>
+                    <li><strong>Wiredin</strong>
+                        <ul>
+                            <li>A full-stack web application for movie lovers where users can upload reaction videos, comment, and review the latest movies</li>
+                            <li>Deployed on GCP utilizing Cloud Storage for hosting videos, Cloud Pub/Sub for handling upload events, and Cloud Run for scalable video transcoding with ffmpeg</li>
+                            <li>Engineered backend using Firebase, integrating Firestore for metadata storage, Firebase Functions for a CRUD API, and Firebase Auth for secure user authentication</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cloud Portfolio</strong>
+                        <ul>
+                            <li>TODO</li>
+                            <li>TODO</li>
+                            <li>TODO</li>
+                        </ul>
+                    </li>
+                    <li><strong>Swifties</strong>
+                        <ul>
+                            <li>A configurable multi-threaded web server with support for echoing HTTP requests, serving static content, handling CRUD API requests, and enforcing authentication to increase file system security</li>
+                            <li>Built by a team of 4 using C++ with Boost, complete with a suite of GUnit unit/integration tests</li>
+                            <li>Deployable to a VM instance on GCP with support for metrics and logging</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
         <section id="skills">
             <div class="container">
@@ -132,22 +129,6 @@
         </div>
     </footer>
 
-    <script>
-        const apiEndpoint = "https://<your-api-gateway-url>"; // Replace with your API Gateway URL
-
-        async function updateVisitorCount() {
-            try {
-                const response = await fetch(apiEndpoint);
-                const data = await response.json();
-                document.getElementById('visitor-count').innerText = `Visitors: ${data.count}`;
-            } catch (error) {
-                console.error('Error fetching visitor count:', error);
-                document.getElementById('visitor-count').innerText = 'Visitors: Unavailable';
-            }
-        }
-
-        // Call the function on page load
-        document.addEventListener('DOMContentLoaded', updateVisitorCount);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
