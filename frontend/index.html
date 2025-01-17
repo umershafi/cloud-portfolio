@@ -23,10 +23,16 @@
     </header>
 
     <main>
+      <section id="visitor-counter">
+        <div class="container">
+            <h2>Visitor Counter</h2>
+            <p id="visitor-count">Visitors: Loading...</p>
+        </div>
+    </section>
         <section id="about">
             <div class="container">
                 <h2>About Me</h2>
-                <p>Hello! I’m Umer Shafi, a passionate web developer with a love for creating dynamic and user-friendly websites. With 5+ years of experience in the industry, I have honed my skills in front-end and back-end development, ensuring seamless experiences for users.</p>
+                <p>Hello! I’m Umer Shafi, a passionate web developer with a love for creating dynamic and user-friendly websites.</p>
             </div>
         </section>
 
@@ -34,14 +40,13 @@
           <div class="container">
               <h2>Education</h2>
               <ul>
-                  <li><strong>Bachelor of Science in Computer Science</strong> - University of California, Los Anegeles (2024)
+                  <li><strong>Bachelor of Science in Computer Science</strong> - University of California, Los Angeles (2024)
                       <ul>
                           <li>Relevant Coursework: Data Structures, Algorithms, Software Engineering, Operating Systems, Artificial
                             Intelligence, Programming Languages, Natural Language Processing, Web Applications</li>
                       </ul>
                   </li>
-                  <li><strong>AWS Certified Solutions Architect – Associate (SAA-C03) | AWS | Decemeber 2024
-                  </li>
+                  <li><strong>AWS Certified Solutions Architect – Associate (SAA-C03) | AWS | December 2024</strong></li>
               </ul>
           </div>
       </section>
@@ -53,23 +58,22 @@
                     <li><strong>Software Engineer Intern</strong> - Crypto Reporting LLC (September 2024 - November 2024)
                         <ul>
                             <li>Implemented infrastructure as code (IaC) using AWS CDK with TypeScript to generate 4 CloudFormation stacks</li>
-                            <li>Enhanced data retrieval efficiency using AWS lambda with Node.js to connect seamlessly with DynamoDB Tables</li>
+                            <li>Enhanced data retrieval efficiency using AWS Lambda with Node.js to connect seamlessly with DynamoDB Tables</li>
                             <li>Secured APIs with AWS Cognito for user authentication and authorization using user and identity pools</li>
-                            <li>Built a CI-CD pipeline with integration test for all user interactions using AWS CodePipeline</li>
+                            <li>Built a CI-CD pipeline with integration tests for all user interactions using AWS CodePipeline</li>
                         </ul>
                     </li>
                     <li><strong>Software Engineer Intern</strong> - Monster Energy (June 2023 – August 2023)
                         <ul>
                             <li>Increased client satisfaction by 30% by implementing product listing filters on the MonsterShop eCommerce website using React Hooks</li>
-                            <li>Reduced pre-production bugs through the development and execution of user acceptance testing for over 100 unique
-                              UX designs in Panaya</li>
+                            <li>Reduced pre-production bugs through the development and execution of user acceptance testing for over 100 unique UX designs in Panaya</li>
                         </ul>
                     </li>
                     <li><strong>Undergraduate Teaching Assistant</strong> - UCLA Department of Computer Science (January 2024 - June 2024)
                       <ul>
                           <li>Improved student exam scores by 15% by developing and presenting NLP topics including LLMs, neural networks,
                             and transformers to a class of 50+ students</li>
-                          <li>Boosted course evaluations by 20\% by providing assistance with Python code debugging during office hours</li>
+                          <li>Boosted course evaluations by 20% by providing assistance with Python code debugging during office hours</li>
                       </ul>
                   </li>
                 </ul>
@@ -116,8 +120,7 @@
                     <li>Databases: Firebase, DynamoDB, MongoDB</li>
                     <li>Developer Tools: Git, Docker, Linux</li>
                     <li>Software: Microsoft (Excel, PowerPoint, Word), Panaya, SAP SD</li>
-                    <li>Best Practices: Agile, Code Review, Testing (Unit, Integration, Regression)
-                    </li>
+                    <li>Best Practices: Agile, Code Review, Testing (Unit, Integration, Regression)</li>
                 </ul>
             </div>
         </section>
@@ -128,5 +131,23 @@
             <p>© 2025 Umer Shafi. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const apiEndpoint = "https://<your-api-gateway-url>"; // Replace with your API Gateway URL
+
+        async function updateVisitorCount() {
+            try {
+                const response = await fetch(apiEndpoint);
+                const data = await response.json();
+                document.getElementById('visitor-count').innerText = `Visitors: ${data.count}`;
+            } catch (error) {
+                console.error('Error fetching visitor count:', error);
+                document.getElementById('visitor-count').innerText = 'Visitors: Unavailable';
+            }
+        }
+
+        // Call the function on page load
+        document.addEventListener('DOMContentLoaded', updateVisitorCount);
+    </script>
 </body>
 </html>
